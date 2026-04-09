@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyro Ag Services | Agricultural Drone Sales & Spraying | Philip, SD</title>
+  <meta name="description" content="Pyro Ag Services LLC — western South Dakota's authorized Terraplex dealer. Agricultural drone sales, custom drone spraying, and precision application services in Philip, SD.">
+  <link rel="icon" href="assets/logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    .hero-display { font-family: system-ui, -apple-system, sans-serif; font-stretch: condensed; }
+    @keyframes glow-pulse-1 { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
+    @keyframes glow-pulse-2 { 0%,100% { opacity: 0.4; } 50% { opacity: 0.85; } }
+    @keyframes float-down { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+    @keyframes fade-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-glow-1 { animation: glow-pulse-1 4s ease-in-out infinite; }
+    .hero-glow-2 { animation: glow-pulse-2 5s ease-in-out infinite 1s; }
+    .scroll-cue { animation: float-down 2s ease-in-out infinite; }
+    .fade-up { animation: fade-up 0.8s ease-out both; }
+    .fade-up-2 { animation: fade-up 0.8s ease-out 0.2s both; }
+    .fade-up-3 { animation: fade-up 0.8s ease-out 0.4s both; }
+  </style>
+</head>
+<body class="bg-stone-950 text-white antialiased">
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <nav class="max-w-7xl mx-auto px-6 py-4" aria-label="Main navigation">
+      <div class="flex items-center justify-between">
+        <a href="#" aria-label="Pyro Ag Services - Home" class="flex items-center">
+          <img
+            src="assets/logo.png"
+            alt="Pyro Ag Services LLC logo"
+            class="w-[90px] h-[90px] object-contain"
+            style="filter: drop-shadow(0 0 15px rgba(249,115,22,0.4));"
+          >
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">Services</a>
+          <a href="#products" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">Products</a>
+          <a href="#about" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">About</a>
+          <a href="#contact" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
+          <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white text-sm font-medium px-5 py-2 rounded-md border border-orange-500/30 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_25px_rgba(234,88,12,0.4)] transition-all">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Get Quote
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Open menu" aria-expanded="false">
+          <svg id="icon-menu" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-stone-950 pt-20 md:hidden">
+    <div class="flex flex-col items-center gap-6 p-8">
+      <a href="#services" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">Services</a>
+      <a href="#products" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">Products</a>
+      <a href="#about" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">About</a>
+      <a href="#contact" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">Contact</a>
+      <a href="#contact" class="mobile-link mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8 py-3 rounded-md border border-orange-500/30 shadow-[0_0_30px_rgba(234,88,12,0.3)]">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Get a Quote
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-stone-950 to-zinc-950">
+      <!-- Background Video -->
+      <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="https://storage.googleapis.com/bgd-sites/terraplex/Header-Images/Justin-Lobaito_s-Video-Oct-30-2025-VEED-1.mp4" type="video/mp4">
+      </video>
+
+      <!-- Dark gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-br from-stone-950/85 via-zinc-950/90 to-stone-950/85 opacity-70"></div>
+
+      <!-- Animated glow blobs -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="hero-glow-1 absolute top-1/4 left-1/4 w-96 h-96 bg-orange-600/20 rounded-full blur-[120px]"></div>
+        <div class="hero-glow-2 absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-600/15 rounded-full blur-[100px]"></div>
+      </div>
+
+      <!-- Cross pattern overlay -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style='background-image: url("data:image/svg+xml,%3Csvg width=%2760%27 height=%2760%27 viewBox=%270 0 60 60%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Cg fill=%27%23ff6600%27 fill-opacity=%271%27%3E%3Cpath d=%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");'></div>
+
+      <!-- Ember accent lines -->
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+        <div class="mb-8 fade-up">
+          <img
+            src="assets/logo.png"
+            alt="Pyro Ag Services LLC"
+            class="w-44 mx-auto object-contain"
+            style="filter: drop-shadow(0 0 40px rgba(249,115,22,0.6));"
+          >
+        </div>
+
+        <div class="fade-up-2">
+          <p class="text-orange-500 font-semibold tracking-[0.4em] uppercase text-sm mb-4" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.5));">
+            Authorized Terraplex Dealer
+          </p>
+          <h1 class="hero-display text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight">
+            Precision Agriculture.
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-500 to-red-500" style="filter: drop-shadow(0 0 30px rgba(249,115,22,0.6));">
+              Ignited.
+            </span>
+          </h1>
+          <p class="text-stone-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            Authorized Terraplex dealer providing agricultural drone sales, drone spraying, and field support throughout Philip, SD and western South Dakota.
+          </p>
+        </div>
+
+        <div class="fade-up-3 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#contact" class="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-10 py-5 text-lg font-semibold rounded-md shadow-[0_0_30px_rgba(234,88,12,0.4)] hover:shadow-[0_0_40px_rgba(234,88,12,0.6)] hover:scale-105 transition-all duration-300 border border-orange-500/30">
+            Request a Quote
+          </a>
+          <a href="#services" class="border-2 border-orange-500/40 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 hover:border-orange-400 px-10 py-5 text-lg rounded-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+            Explore Drone Services
+          </a>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-cue">
+          <svg class="w-8 h-8 text-stone-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERVICES
+         ===================================================== -->
+    <section id="services" class="py-24 bg-zinc-950 relative overflow-hidden" aria-label="Services">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-red-600/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-sm mb-3" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">
+            Drone Application Services
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            Advanced Ag Drone Services,
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+              Done Right.
+            </span>
+          </h2>
+          <p class="text-stone-400 text-lg max-w-2xl mx-auto">
+            Precision. Speed. Reduced waste. Modern compliance-ready solutions for efficient, low-impact application.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card: Precision Spraying -->
+          <div class="group">
+            <div class="bg-stone-900/50 backdrop-blur-sm rounded-lg p-8 h-full border border-stone-800 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group-hover:bg-stone-900/70">
+              <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(249,115,22,0.3)] group-hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] group-hover:scale-110 transition-all duration-300">
+                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Precision Spraying</h3>
+              <p class="text-stone-400 leading-relaxed">Targeted herbicide, fungicide, and fertilizer application with minimal drift and maximum coverage.</p>
+            </div>
+          </div>
+          <!-- Card: Cover Crop Seeding -->
+          <div class="group">
+            <div class="bg-stone-900/50 backdrop-blur-sm rounded-lg p-8 h-full border border-stone-800 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group-hover:bg-stone-900/70">
+              <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(249,115,22,0.3)] group-hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] group-hover:scale-110 transition-all duration-300">
+                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Cover Crop Seeding</h3>
+              <p class="text-stone-400 leading-relaxed">Efficient aerial seeding for cover crops, ensuring even distribution across your fields.</p>
+            </div>
+          </div>
+          <!-- Card: Pest Management -->
+          <div class="group">
+            <div class="bg-stone-900/50 backdrop-blur-sm rounded-lg p-8 h-full border border-stone-800 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group-hover:bg-stone-900/70">
+              <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-red-600 to-orange-600 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(249,115,22,0.3)] group-hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] group-hover:scale-110 transition-all duration-300">
+                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Pest Management</h3>
+              <p class="text-stone-400 leading-relaxed">Rapid response pest control applications to protect your crops when timing is critical.</p>
+            </div>
+          </div>
+          <!-- Card: Quick Response -->
+          <div class="group">
+            <div class="bg-stone-900/50 backdrop-blur-sm rounded-lg p-8 h-full border border-stone-800 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group-hover:bg-stone-900/70">
+              <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-orange-600 to-red-500 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(249,115,22,0.3)] group-hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] group-hover:scale-110 transition-all duration-300">
+                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Quick Response</h3>
+              <p class="text-stone-400 leading-relaxed">When conditions change fast, we're ready. Rapid deployment for time-sensitive applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         REVOLUTION INTRO
+         ===================================================== -->
+    <section class="py-16 bg-gradient-to-br from-stone-950 via-zinc-950 to-stone-950 relative overflow-hidden">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-orange-600/[0.08] rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-sm mb-3" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">
+          Gteex Revolution Series
+        </p>
+        <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+          The Revolution
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+            Drone Line
+          </span>
+        </h2>
+        <p class="text-stone-400 text-lg leading-relaxed max-w-2xl mx-auto">
+          Engineered by Gteex for professional agricultural operations. Built to deliver unmatched reliability, precision, and performance in the field.
+        </p>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
+    </section>
+
+    <!-- =====================================================
+         R-32 PRODUCT
+         ===================================================== -->
+    <section id="products" class="py-24 bg-gradient-to-br from-zinc-950 via-stone-950 to-zinc-950 relative overflow-hidden" aria-label="R-32 Revolution Drone">
+      <div class="absolute top-1/3 right-1/4 w-[700px] h-[700px] bg-orange-600/[0.08] rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Content -->
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">R-32 Revolution Drone</h2>
+            <p class="text-xl text-orange-500 mb-6 font-semibold">The Next Generation of High-Capacity Drone Application</p>
+            <p class="text-stone-400 text-lg leading-relaxed mb-8">
+              Built for large-scale agricultural operations, the GTEEX Revolution R-32 delivers unmatched capacity, speed, and terrain capability. Designed for professional operators, the R-32 helps cover more acres per day while maintaining precision and efficiency.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <!-- Spec: Acres -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h9l1 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">1,600 Acres Per Day</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">High-capacity operations allow applicators to spray or spread 1,200–1,600 acres daily, helping large operations complete field work faster.</p>
+              </div>
+              <!-- Spec: Tank -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">32 Gallon Tank</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">A 32-gallon spray tank with 330 lb payload capacity reduces refill frequency and maximizes productivity in the field.</p>
+              </div>
+              <!-- Spec: Speed -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">43 MPH Application Speed</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">Operate at speeds up to 43 mph with a 45–60 ft spray swath, allowing more acres to be covered in less time.</p>
+              </div>
+              <!-- Spec: Radar -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M4 6h.01"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M12 18h.01"/><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"/><circle cx="12" cy="12" r="2"/><path d="m13.41 10.59 5.66-5.66"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">360° Radar + LiDAR</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">Advanced obstacle detection with 360° radar and forward LiDAR allows the drone to operate safely in uneven or difficult terrain.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold rounded-md shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:shadow-[0_0_40px_rgba(249,115,22,0.5)] transition-all duration-300 border border-orange-500/30">Request Pricing</a>
+              <a href="https://storage.googleapis.com/bgd-sites/terraplex/dealer-documents/Terraplex_R-32_sell-sheet_1.26.26.pdf" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-3 border-2 border-orange-500/40 text-orange-500 hover:bg-orange-500/10 hover:text-orange-400 hover:border-orange-400 rounded-md transition-all duration-300">Download Spec Brochure</a>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="relative group lg:order-last">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-600/30 to-red-600/20 rounded-2xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-orange-500/30 shadow-[0_0_60px_rgba(249,115,22,0.3)]">
+              <img src="https://storage.googleapis.com/bgd-sites/terraplex/image001.jpg" alt="R-32 Heavy Lift Drone" class="w-full h-auto object-cover">
+              <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-orange-500/5 to-orange-400/10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         I-19 PRODUCT
+         ===================================================== -->
+    <section class="py-24 bg-gradient-to-br from-zinc-950 via-stone-950 to-zinc-950 relative overflow-hidden" aria-label="I-19 Revolution Drone">
+      <div class="absolute top-1/3 left-1/2 w-[600px] h-[600px] bg-orange-600/5 rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Image -->
+          <div class="relative group">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-orange-600/10 rounded-2xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-orange-500/30 shadow-[0_0_50px_rgba(249,115,22,0.2)]">
+              <img src="https://storage.googleapis.com/bgd-sites/terraplex/Header-Images/RevolutionWebHeader.00_00_13_22.Still005.jpg" alt="I-19 Revolution Drone" class="w-full h-auto object-cover">
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">I-19 Revolution Drone</h2>
+            <p class="text-xl text-orange-500 mb-6 font-semibold">Precision Power for Modern Agriculture</p>
+            <p class="text-stone-400 text-lg leading-relaxed mb-8">
+              The GTEEX Revolution I-19 combines precision technology with reliable field performance. Built for professional operators, the I-19 delivers efficient spraying, spreading, and seeding capabilities while reducing input waste and improving operational efficiency.
+            </p>
+            <div class="h-[1px] bg-gradient-to-r from-orange-500/20 via-orange-500/60 to-orange-500/20 mb-8"></div>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <!-- 600 acres -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h9l1 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">600 Acres Per Day</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">Maximize your application window with rapid charging and high-volume operating cycles capable of covering up to 600 acres per day.</p>
+              </div>
+              <!-- 20 gal -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">20 Gallon Tank</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">A 20-gallon liquid capacity supports high-volume application with fewer refills, keeping operations running efficiently during peak season.</p>
+              </div>
+              <!-- 31 mph -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">31 MPH Application Speed</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">Operate at speeds up to 31 mph with a 40-foot spray swath, allowing operators to cover more acres quickly and efficiently.</p>
+              </div>
+              <!-- RTK -->
+              <div class="bg-stone-900/60 backdrop-blur-sm border border-orange-500/20 rounded-lg p-4 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.3)] shrink-0">
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/></svg>
+                  </div>
+                  <p class="text-white font-bold text-sm">360° Radar + RTK Precision</p>
+                </div>
+                <p class="text-stone-400 text-xs leading-relaxed ml-11">Advanced 360° radar combined with RTK positioning delivers pinpoint accuracy within ±4 inches, allowing reliable operation in wet, uneven, or difficult terrain.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold rounded-md shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:shadow-[0_0_40px_rgba(249,115,22,0.5)] transition-all duration-300 border border-orange-500/30">Request Pricing</a>
+              <a href="https://storage.googleapis.com/bgd-sites/terraplex/Terraplex_I-19_SellSheet.pdf" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-3 border-2 border-orange-500/40 text-orange-500 hover:bg-orange-500/10 hover:text-orange-400 hover:border-orange-400 rounded-md transition-all duration-300">Download Spec Sheet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PARTS & SERVICE
+         ===================================================== -->
+    <section id="parts-service" class="py-24 bg-stone-950 relative overflow-hidden" aria-label="Parts and Service">
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-sm mb-3" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">
+            Drone Parts & Service
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            Keep Your Fleet
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Mission-Ready</span>
+          </h2>
+          <p class="text-stone-400 text-lg max-w-2xl mx-auto mb-6">
+            Dependable. Local. Fast turnaround. Dealer-backed service support for maximum uptime.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <!-- Repairs -->
+          <div class="bg-stone-900/50 backdrop-blur-sm border border-stone-800 rounded-lg p-8 h-full hover:border-orange-500/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.1)]">
+            <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+              <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Repairs &amp; Diagnostics</h3>
+            <p class="text-stone-400 mb-6">Expert troubleshooting and repairs to keep your operation running smoothly.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Motor replacement</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Flight controller repair</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Sensor calibration</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Frame repairs</li>
+            </ul>
+          </div>
+          <!-- Parts -->
+          <div class="bg-stone-900/50 backdrop-blur-sm border border-stone-800 rounded-lg p-8 h-full hover:border-orange-500/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.1)]">
+            <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+              <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Replacement Parts</h3>
+            <p class="text-stone-400 mb-6">Genuine Terraplex components and accessories ready to ship.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Batteries &amp; chargers</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Propellers &amp; motors</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Spray systems</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Navigation modules</li>
+            </ul>
+          </div>
+          <!-- Maintenance -->
+          <div class="bg-stone-900/50 backdrop-blur-sm border border-stone-800 rounded-lg p-8 h-full hover:border-orange-500/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.1)]">
+            <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+              <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Routine Maintenance</h3>
+            <p class="text-stone-400 mb-6">Scheduled service to maximize uptime and extend equipment life.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Pre-season inspection</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Software updates</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>System optimization</li>
+              <li class="flex items-center gap-2 text-stone-500 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Performance testing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Fast Response banner -->
+        <div class="bg-gradient-to-r from-stone-900/80 to-stone-900/60 backdrop-blur-sm border border-orange-500/30 rounded-xl p-8 text-center shadow-[0_0_40px_rgba(249,115,22,0.1)]">
+          <svg class="w-12 h-12 text-orange-500 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h3 class="text-2xl font-bold text-white mb-3">Fast Response Times</h3>
+          <p class="text-stone-400 mb-6 max-w-2xl mx-auto">
+            We know downtime costs money. That's why we prioritize quick turnarounds and keep critical parts in stock.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white rounded-md px-8 py-3 shadow-[0_0_20px_rgba(234,88,12,0.3)] hover:shadow-[0_0_30px_rgba(234,88,12,0.5)] border border-orange-500/30 transition-all">Schedule Service</a>
+            <a href="#contact" class="inline-flex items-center justify-center border-2 border-orange-500/40 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 hover:border-orange-400 rounded-md px-8 py-3 transition-all">Request Parts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TERRAPLEX TRUST
+         ===================================================== -->
+    <section class="py-20 bg-gradient-to-br from-stone-950 via-zinc-950 to-stone-950 relative overflow-hidden" aria-label="Authorized Terraplex Dealer">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-orange-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/60 to-transparent"></div>
+
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="text-center">
+          <div class="flex justify-center mb-8">
+            <div class="inline-flex items-center gap-4 px-8 py-4 bg-stone-900/80 backdrop-blur-sm border border-orange-500/30 rounded-lg shadow-[0_0_40px_rgba(249,115,22,0.2)]">
+              <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div class="h-8 w-px bg-orange-500/30"></div>
+              <span class="text-2xl font-bold text-white tracking-tight">TERRAPLEX</span>
+              <div class="h-8 w-px bg-orange-500/30"></div>
+              <span class="text-orange-500 font-semibold tracking-widest text-sm">AUTHORIZED DEALER</span>
+            </div>
+          </div>
+
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Backed by Terraplex Technology &amp; Support</h2>
+          <p class="text-stone-400 text-lg max-w-2xl mx-auto mb-12">
+            Trained, certified, and ready to deploy. Experience the confidence that comes from working with an officially authorized dealer.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-stone-900/50 backdrop-blur-sm border border-stone-800 rounded-lg p-6 hover:border-orange-500/30 transition-all duration-300">
+              <svg class="w-10 h-10 text-orange-500 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              <h3 class="text-white font-bold mb-2">Factory Certified</h3>
+              <p class="text-stone-400 text-sm">Official training and certification on all Terraplex systems</p>
+            </div>
+            <div class="bg-stone-900/50 backdrop-blur-sm border border-stone-800 rounded-lg p-6 hover:border-orange-500/30 transition-all duration-300">
+              <svg class="w-10 h-10 text-orange-500 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <h3 class="text-white font-bold mb-2">Genuine Parts</h3>
+              <p class="text-stone-400 text-sm">Access to authentic Terraplex parts and components</p>
+            </div>
+            <div class="bg-stone-900/50 backdrop-blur-sm border border-stone-800 rounded-lg p-6 hover:border-orange-500/30 transition-all duration-300">
+              <svg class="w-10 h-10 text-orange-500 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+              <h3 class="text-white font-bold mb-2">Direct Support</h3>
+              <p class="text-stone-400 text-sm">Technical backing and warranty support from Terraplex</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red-500/40 to-transparent"></div>
+    </section>
+
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
+    <section id="about" class="py-24 bg-zinc-950 relative overflow-hidden" aria-label="About Us">
+      <div class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-orange-600/[0.06] rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-1/3 right-0 w-[400px] h-[400px] bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-sm mb-3" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">
+            About Us
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            Western South Dakota's
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Precision Ag Partner</span>
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div class="space-y-6 text-stone-400 text-lg leading-relaxed">
+            <p>
+              Pyro Ag Services LLC is a family-owned custom application business based in western South Dakota, founded in the spring of 2024. The company specializes in precision application using both agricultural drones and a self-propelled sprayer, providing efficient and modern solutions for today's producers.
+            </p>
+            <p>
+              In addition to custom application services, Pyro Ag Services has expanded its offerings to include sales of Gteex agricultural drones, Lane trailers, application software, and Windfall drift control agent. By combining advanced technology with dependable service, Pyro Ag Services is committed to helping producers improve efficiency and maximize results in the field.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6">What We Offer</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-fr">
+              <div class="bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                </div>
+                <p class="text-white font-semibold mb-1">Agricultural Drone Sales</p>
+                <p class="text-stone-500 text-sm leading-relaxed">Authorized dealer for Gteex agricultural drones</p>
+              </div>
+              <div class="bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <p class="text-white font-semibold mb-1">Custom Application</p>
+                <p class="text-stone-500 text-sm leading-relaxed">Drone and self-propelled sprayer services</p>
+              </div>
+              <div class="bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                </div>
+                <p class="text-white font-semibold mb-1">Lane Trailers</p>
+                <p class="text-stone-500 text-sm leading-relaxed">Heavy-duty trailers designed for efficient drone transport and field operations.</p>
+              </div>
+              <div class="bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <p class="text-white font-semibold mb-1">Application Software</p>
+                <p class="text-stone-500 text-sm leading-relaxed">Advanced flight planning and application software for precise drone operations.</p>
+              </div>
+              <div class="bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+                </div>
+                <p class="text-white font-semibold mb-1">Windfall Drift Control</p>
+                <p class="text-stone-500 text-sm leading-relaxed">Reduce spray drift to keep applications accurate and on target.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-stone-950 via-zinc-950 to-stone-950 relative overflow-hidden" aria-label="Contact Us">
+      <div class="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-orange-600/[0.08] rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/50 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-sm mb-3" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">
+            Get In Touch
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            Ready to Ignite
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Your Operation?</span>
+          </h2>
+          <p class="text-stone-400 text-lg max-w-2xl mx-auto">
+            Request a quote for drone services, inquire about the Gteex Revoluion Line, or schedule parts &amp; service.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-12">
+          <!-- Contact info -->
+          <div class="lg:col-span-2 space-y-8">
+            <div>
+              <img src="assets/logo.png" alt="Pyro Ag Services" class="w-40 h-40 object-contain mb-6" style="filter: drop-shadow(0 0 30px rgba(249,115,22,0.4));">
+              <h3 class="text-2xl font-bold text-white mb-2">Pyro Ag Services LLC</h3>
+              <p class="text-stone-400">Authorized Terraplex Dealer</p>
+            </div>
+
+            <div class="space-y-4">
+              <a href="tel:+16054416825" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 rounded-lg bg-stone-900 border border-orange-500/30 flex items-center justify-center group-hover:border-orange-500 transition-all shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+                  <svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm text-stone-500">Call Us</p>
+                  <p class="text-white font-medium">(605) 441-6825</p>
+                </div>
+              </a>
+
+              <a href="mailto:taylor.ross@pyroagllc.com" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 rounded-lg bg-stone-900 border border-orange-500/30 flex items-center justify-center group-hover:border-orange-500 transition-all shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+                  <svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm text-stone-500">Email Us</p>
+                  <p class="text-white font-medium">taylor.ross@pyroagllc.com</p>
+                </div>
+              </a>
+
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-lg bg-stone-900 border border-orange-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+                  <svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="text-sm text-stone-500">Location</p>
+                  <p class="text-white font-medium">Philip, SD</p>
+                  <p class="text-stone-500 text-sm">Serving Central &amp; Western SD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="lg:col-span-3">
+            <div class="bg-stone-900/60 backdrop-blur-sm border-2 border-orange-500/20 rounded-2xl p-8 shadow-[0_0_50px_rgba(249,115,22,0.1)]">
+              <!-- Thank-you banner (shown when ?submitted=true) -->
+              <div id="thank-you-banner" class="hidden mb-6 p-6 rounded-lg bg-orange-600/20 border border-orange-500/40 text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center">
+                  <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-1">Thank You!</h3>
+                <p class="text-stone-300 text-sm">Your message has been sent. We'll be in touch within 24 hours.</p>
+              </div>
+              <form action="/.netlify/functions/submit" method="POST" class="space-y-6">
+                <input type="hidden" name="_redirect" value="/#contact">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="contact-name" class="block text-sm font-medium text-stone-400 mb-2">Your Name</label>
+                    <input id="contact-name" name="name" type="text" required placeholder="John Smith" class="w-full h-12 px-4 rounded-lg border border-stone-700 bg-stone-900/50 text-white placeholder:text-stone-600 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors">
+                  </div>
+                  <div>
+                    <label for="contact-email" class="block text-sm font-medium text-stone-400 mb-2">Email Address</label>
+                    <input id="contact-email" name="email" type="email" required placeholder="john@example.com" class="w-full h-12 px-4 rounded-lg border border-stone-700 bg-stone-900/50 text-white placeholder:text-stone-600 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors">
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="contact-phone" class="block text-sm font-medium text-stone-400 mb-2">Phone Number</label>
+                    <input id="contact-phone" name="phone" type="tel" placeholder="(555) 123-4567" class="w-full h-12 px-4 rounded-lg border border-stone-700 bg-stone-900/50 text-white placeholder:text-stone-600 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors">
+                  </div>
+                  <div>
+                    <label for="contact-interest" class="block text-sm font-medium text-stone-400 mb-2">I'm Interested In</label>
+                    <select id="contact-interest" name="interest" class="w-full h-12 px-4 rounded-lg border border-stone-700 bg-stone-900/50 text-white focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="spraying">Application Services</option>
+                      <option value="drone">Buying a Drone</option>
+                      <option value="parts">Parts &amp; Service</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-sm font-medium text-stone-400 mb-2">Tell Us More</label>
+                  <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your operation and how we can help..." class="w-full px-4 py-3 rounded-lg border border-stone-700 bg-stone-900/50 text-white placeholder:text-stone-600 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white h-14 text-lg font-semibold rounded-lg shadow-[0_0_30px_rgba(234,88,12,0.3)] hover:shadow-[0_0_40px_rgba(234,88,12,0.5)] transition-all duration-300 border border-orange-500/30">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="bg-stone-950 py-12 relative" aria-label="Site footer">
+    <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.png" alt="Pyro Ag Services" class="w-14 h-14 object-contain">
+          <div>
+            <p class="text-white font-semibold">Pyro Ag Services LLC</p>
+            <p class="text-stone-500 text-sm">Authorized Terraplex Dealer</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-8 text-stone-400 text-sm">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#products" class="hover:text-white transition-colors">Products</a>
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <p class="text-stone-500 text-sm">© <span id="footer-year">2026</span> Pyro Ag Services LLC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal interaction script: scroll-state header, mobile menu, dynamic year -->
+  <script>
+    (function() {
+      var header = document.getElementById('site-header');
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      var year = document.getElementById('footer-year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      function setHeaderState() {
+        if (window.scrollY > 50) {
+          header.classList.add('bg-stone-950/95', 'backdrop-blur-md', 'shadow-lg');
+          header.classList.remove('bg-transparent');
+        } else {
+          header.classList.remove('bg-stone-950/95', 'backdrop-blur-md', 'shadow-lg');
+          header.classList.add('bg-transparent');
+        }
+      }
+      setHeaderState();
+      window.addEventListener('scroll', setHeaderState, { passive: true });
+
+      var open = false;
+      function setMenu(next) {
+        open = next;
+        btn.setAttribute('aria-expanded', open);
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.classList.toggle('hidden', !open);
+        iconMenu.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+      btn.addEventListener('click', function() { setMenu(!open); });
+      menu.querySelectorAll('a.mobile-link').forEach(function(a) {
+        a.addEventListener('click', function() { setMenu(false); });
+      });
+
+      // Show thank-you banner if redirected back after form submission
+      if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+        var banner = document.getElementById('thank-you-banner');
+        if (banner) {
+          banner.classList.remove('hidden');
+          banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

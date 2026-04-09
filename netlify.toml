@@ -1,0 +1,9 @@
+# Managed by the Terraplex Dealer Platform. Do not edit by hand.
+# Re-run "Scaffold form handling" in the platform UI to refresh.
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
