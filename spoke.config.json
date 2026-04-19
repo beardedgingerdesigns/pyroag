@@ -1,7 +1,7 @@
 {
   "hub": {
     "name": "terraplex",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "dealer": {
     "id": "pyro-ag",
@@ -26,7 +26,14 @@
     }
   },
   "drones": ["r-32", "i-19"],
-  "services": ["Drone Sales"],
+  "services": [
+    "Drone Sales",
+    "Custom Spraying/Application",
+    "Cover Crop Seeding",
+    "Pest Management",
+    "Service & Repair",
+    "Parts"
+  ],
   "story": {
     "founded": "2024",
     "notableFacts": [
