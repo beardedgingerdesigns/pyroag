@@ -1,0 +1,54 @@
+{
+  "hub": {
+    "name": "terraplex",
+    "version": "0.2.0"
+  },
+  "dealer": {
+    "id": "pyro-ag",
+    "businessName": "Pyro Ag Services LLC",
+    "ownerName": "Taylor Ross",
+    "email": "taylor.ross@pyroagllc.com",
+    "phone": "(605) 441-6825",
+    "location": { "city": "Philip", "state": "SD" },
+    "serviceArea": "western South Dakota"
+  },
+  "identity": {
+    "archetype": "forge",
+    "accent": {
+      "primary": "#ea580c",
+      "secondary": "#dc2626",
+      "mode": "gradient"
+    },
+    "headline": "Precision Agriculture. Ignited.",
+    "logo": {
+      "type": "image",
+      "src": "assets/logo.png"
+    }
+  },
+  "drones": ["r-32", "i-19"],
+  "services": ["Drone Sales"],
+  "story": {
+    "founded": "2024",
+    "notableFacts": [
+      "Family-owned custom application business",
+      "Founded in the spring of 2024",
+      "Based in western South Dakota",
+      "Uses both agricultural drones and a self-propelled sprayer"
+    ]
+  },
+  "additionalEquipment": ["trailers", "software", "drift control agents"],
+  "font": "system",
+  "formFields": {
+    "base": true,
+    "extraFields": [
+      {
+        "name": "interest",
+        "label": "I'm Interested In",
+        "type": "select",
+        "options": ["Application Services", "Buying a Drone", "Parts & Service", "Other"],
+        "required": false
+      }
+    ]
+  },
+  "referenceSites": ["https://pyroagllc.com"]
+}
