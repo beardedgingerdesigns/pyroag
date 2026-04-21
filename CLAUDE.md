@@ -13,6 +13,7 @@ Dealer site for Pyro Ag Services LLC. Part of the Terraplex dealer network.
 - **Structured dealer data:** `spoke.config.json` (validated against `hubs/terraplex/spoke/spoke.schema.json`). When editing dealer facts — phone, services, archetype, accent color — edit the config, not prose here.
 - **Hub:** Terraplex hub at `hubs/terraplex/`, pinned to v0.2.0 in `spoke.config.json`. Read `hubs/terraplex/HUB-CLAUDE.md` to understand what hub content is authoritative (product specs, asset URLs, archetype recipes, terminology rules) versus what this spoke owns. Hub content is not editable from this repo.
 - **Visual reference:** `_reference/` contains the original Base44 screenshot, scraped text, and logo exports. Look at reference images before writing code that changes visual treatment; spot-check your output against them before reporting done.
+- **Customizations log:** `CHANGELOG.md` tracks post-propagation deviations from hub defaults (persistent customizations like dealer-specific sections, layouts, or content that hub propagation would otherwise strip). Read before making changes that could conflict with hub rules; add an entry for any new deviation.
 
 ## Spoke-specific prose
 
