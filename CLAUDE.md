@@ -38,11 +38,34 @@ Pyro Ag's specific implementation of FORGE layers detail beyond the generic arch
 - Hero H1 gradient ("Ignited."): `from-orange-400 via-amber-500 to-red-500`
 - Ember accent lines at section edges: `bg-gradient-to-r from-transparent via-orange-500/40-60 to-transparent`
 
+## Partials
+
+This site uses **marked partials** for the shared nav, footer, and Tailwind config. Source of truth lives in `_partials/`:
+
+- `_partials/nav.html` — full header + mobile menu
+- `_partials/footer.html` — footer
+- `_partials/tailwind-config.html` — Tailwind theme extensions
+
+Pages reference them via HTML-comment markers:
+
+```html
+<!-- partial:nav activePage="home" -->
+...rendered content — DO NOT hand-edit, regenerated on every turn...
+<!-- /partial:nav -->
+```
+
+**To change the nav/footer/Tailwind config: edit the file in `_partials/`.** The manager app re-renders all pages after every turn. Editing inside a marker region in a page is overwritten on the next run (a `PostToolUse` hook warns you in real time if it happens).
+
+Template syntax: `{{var}}` and `{{#if var=="lit"}}...{{else}}...{{/if}}`. Truthy check: `{{#if var}}...{{/if}}`. No nesting.
+
+Pyro is single-page today; partials are scaffolded so new pages drop in with consistent nav/footer.
+
 ## Do Not Touch
 
 - `netlify.toml` and any `netlify/functions/*` files — platform-managed.
 - `_reference/` — dealer-local visual truth, do not alter.
 - `spoke.config.json` — only edit to reflect genuine dealer data changes (new phone, updated services, etc.). Do NOT edit to override hub content.
+- `_partials/` marker regions in `index.html` — edit the partial template, not the rendered output.
 
 ## Client Quirks
 

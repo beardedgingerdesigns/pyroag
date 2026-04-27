@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pyro Ag Services | Agricultural Drone Sales & Spraying | Philip, SD</title>
+  <title>Pyro Ag Services | Agricultural Drone Sales &amp; Spraying | Philip, SD</title>
   <meta name="description" content="Pyro Ag Services LLC — western South Dakota's authorized Terraplex dealer. Agricultural drone sales, custom drone spraying, and precision application services in Philip, SD.">
   <link rel="icon" href="assets/logo.png">
 
@@ -181,7 +181,8 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+  <!-- partial:tailwind-config -->
+<script>
     tailwind.config = {
       theme: {
         extend: {
@@ -192,6 +193,7 @@
       },
     }
   </script>
+<!-- /partial:tailwind-config -->
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
@@ -213,7 +215,8 @@
   <!-- =====================================================
        NAVIGATION
        ===================================================== -->
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <!-- partial:nav activePage="home" -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
     <nav class="max-w-7xl mx-auto px-6 py-4" aria-label="Main navigation">
       <div class="flex items-center justify-between">
         <a href="#" aria-label="Pyro Ag Services - Home" class="flex items-center">
@@ -243,6 +246,7 @@
       </div>
     </nav>
   </header>
+<!-- /partial:nav -->
 
   <!-- Mobile Menu Panel -->
   <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-stone-950 pt-20 md:hidden">
@@ -896,7 +900,8 @@
   <!-- =====================================================
        FOOTER
        ===================================================== -->
-  <footer class="bg-stone-950 py-12 relative" aria-label="Site footer">
+  <!-- partial:footer -->
+<footer class="bg-stone-950 py-12 relative" aria-label="Site footer">
     <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -919,6 +924,7 @@
       </div>
     </div>
   </footer>
+<!-- /partial:footer -->
 
   <!-- Minimal interaction script: scroll-state header, mobile menu, dynamic year -->
   <script>
