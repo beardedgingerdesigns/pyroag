@@ -1,0 +1,122 @@
+{
+  "healthScore": {
+    "scores": [
+      { "n": 1, "heuristic": "Visibility of System Status", "score": 2, "issue": "The contact form has no inline submit-state feedback. Clicking 'Send Message' triggers a full-page POST with no spinner, disabled state, or progress indicator; success is only visible after Netlify redirects back with ?submitted=true. Background video also lacks a poster frame, so on slow connections the hero is briefly black." },
+      { "n": 2, "heuristic": "Match Between System and the Real World", "score": 3, "issue": "Mostly speaks operator language (acres/day, gallons, MPH, swath width). However 'Mission-Ready', 'Ignited.', and 'Quick Response' lean toward marketing rhetoric over the concrete commitments operators expect ('within 24 hours', 'next-day part shipping', 'season-long service contract')." },
+      { "n": 3, "heuristic": "User Control and Freedom", "score": 3, "issue": "Smooth-scroll anchors and a working mobile menu, but the form has no clear way to abandon/revise mid-flow on slow connections, and no Escape-to-close on the full-screen mobile menu." },
+      { "n": 4, "heuristic": "Consistency and Standards", "score": 2, "issue": "The same primary action is labeled 'Get Quote', 'Get a Quote', 'Request a Quote', 'Request Pricing', 'Schedule Service', and 'Request Parts' across the page, all pointing to the same #contact form. Mobile menu hover color is amber-500 while desktop nav uses the orange-500/white pattern — drift from the FORGE accent." },
+      { "n": 5, "heuristic": "Error Prevention", "score": 2, "issue": "Form relies entirely on HTML5 `required` and a hidden honeypot. No phone-format mask, no email-domain sanity check, no character-count guidance on the message field. The 'I'm Interested In' select is not required, so leads can submit with no routing signal." },
+      { "n": 6, "heuristic": "Recognition Rather Than Recall", "score": 3, "issue": "Phone, email, and city are visible in nav-CTA, contact section, and footer. However service hours, response-time SLA, and service-area boundary are not surfaced anywhere in the UI (only in JSON-LD), so users must remember/guess whether their farm is in range." },
+      { "n": 7, "heuristic": "Flexibility and Efficiency of Use", "score": 3, "issue": "tel: and mailto: links are present, but the desktop 'Get Quote' button scrolls to the form rather than initiating a call — on mobile this is a missed shortcut for in-field farmers. No sticky tap-to-call bar on mobile despite the field-operator audience." },
+      { "n": 8, "heuristic": "Aesthetic and Minimalist Design", "score": 3, "issue": "FORGE archetype is faithfully executed (gradient text, ember lines, orange glows). Some sections stack three+ decorative blur orbs plus pattern overlays plus ember lines, which crosses from 'forge intensity' into visual noise — particularly the hero, where video + overlay + 2 glow blobs + cross-pattern + 2 ember lines compete." },
+      { "n": 9, "heuristic": "Help Users Recognize, Diagnose, and Recover from Errors", "score": 1, "issue": "There is literally no error-state UI. If the Netlify function fails, the user sees the raw function error page. Required-field violations get only the browser default tooltip. No styled error messaging, no field-level validation hints." },
+      { "n": 10, "heuristic": "Help and Documentation", "score": 2, "issue": "Spec sheet PDFs are linked from each drone — good. But no FAQ, no pricing transparency (acre rate, minimums), no booking lead-time, no 'what to expect after I submit' copy, and no field-prep guidance for first-time custom-application customers." }
+    ],
+    "total": 24,
+    "rating": "moderate"
+  },
+  "antiPatterns": {
+    "verdict": "low",
+    "summary": "The site faithfully implements the FORGE archetype recipe — dark stone-950 base, orange-to-red gradient accents, ember lines, glow shadows, and gradient text are intentional and locked in CLAUDE.md, so they should not be flagged as AI tells. That said, two AI-generation seams are visible: (1) the 'What We Offer' grid has 5 cards in a 2-column layout, leaving an orphan card — a classic generated-content sloppiness rather than a design choice, and (2) the page uses six different verbal labels for the same primary CTA ('Get Quote', 'Get a Quote', 'Request a Quote', 'Request Pricing', 'Schedule Service', 'Request Parts'), suggesting independent section-by-section generation without a final consistency pass. Otherwise the copy is grounded in real dealer facts (Taylor Ross, Philip SD, founded 2024, drone+sprayer fleet) and avoids generic AI filler.",
+    "deterministicFindings": [
+      { "type": "typo", "file": "index.html", "note": "Line 794: 'Gteex Revoluion Line' — missing 't' in 'Revolution'." },
+      { "type": "orphan-grid", "file": "index.html", "note": "Lines 735-771: 'What We Offer' renders 5 equal cards in `sm:grid-cols-2`, leaving a half-empty final row on tablet+ breakpoints." },
+      { "type": "cta-label-drift", "file": "index.html", "note": "Six different labels for the same #contact anchor target across nav/hero/parts/products sections. Reads as ungoverned generation rather than intentional variation." },
+      { "type": "missing-poster", "file": "index.html", "note": "Line 271: hero `<video>` has no `poster` attribute and no preload hint, so first paint on slow connections is black until the video buffers." },
+      { "type": "no-error-ui", "file": "index.html", "note": "Form at line 852 has no error-state markup — relies entirely on browser-default `required` tooltips and a Netlify error page if the function fails." },
+      { "type": "mobile-nav-color-drift", "file": "_partials/nav.html (and rendered region)", "note": "Mobile menu links use `hover:text-amber-500` while desktop nav uses orange/white. Out of sync with the locked FORGE accent (orange-500/red-600)." }
+    ]
+  },
+  "whatsWorking": [
+    "FORGE archetype execution is disciplined and on-brief: hero gradient text, eyebrow drop-shadows, ember accent lines, and orange-to-red CTA gradients all match the visual rules in CLAUDE.md, giving the site a coherent identity rather than generic dark-SaaS polish.",
+    "Hub-canonical product spec strips for R-32 and I-19 are intact (4 specs each: acres/day, tank, speed, radar) with concrete numbers and dealer-supplied PDF spec sheets, which gives decision-makers something to download and forward.",
+    "Schema.org JSON-LD is thorough — LocalBusiness with geo radius, OfferCatalog with services and products, founder, and contact data — meaningful SEO investment for a small dealer site."
+  ],
+  "priorityIssues": [
+    {
+      "id": "ISSUE-001",
+      "severity": "P0",
+      "what": "The contact form has no submit-state, success-state, or error-state UI inside the form itself.",
+      "why": "Operators on slow rural connections will tap 'Send Message', see no response, and either tap again (duplicate leads) or assume the site is broken and call a competitor. If the Netlify function fails they see a raw error page instead of recoverable inline messaging — a credibility-killing first impression for a dealer asking for a sales conversation.",
+      "fix": "Wire JS-based fetch submission to /.netlify/functions/submit with: a disabled+spinner state on the button while in flight, an inline success block that replaces the form (not just a banner above it), and a styled error block with retry guidance and the tel: number as a fallback. Keep the no-JS POST path as graceful degradation.",
+      "suggestedCommand": "harden",
+      "suggestedInstruction": "In the contact form on index.html (form starting at line 852), add JS-progressive submission that intercepts submit, disables the button with a spinner+'Sending…' label during the fetch to /.netlify/functions/submit, replaces the form with an inline success state on 200, and shows a styled error block (orange-500/30 border, white heading 'We couldn't send that — please call (605) 441-6825 or try again') on non-200 with a retry button. Keep the existing no-JS POST as the fallback and preserve the honeypot field."
+    },
+    {
+      "id": "ISSUE-002",
+      "severity": "P1",
+      "what": "Typo 'Gteex Revoluion Line' on the public-facing contact-section subhead.",
+      "why": "It is one of the highest-eye-traffic strings on the page (above the primary lead form) and directly undermines the 'authorized dealer' credibility claim made two sections above. Anyone forwarding the link to a buying committee will get pinged on it.",
+      "fix": "Fix the misspelling to 'Revolution' and grep the page for any other 'Revoluion' instances.",
+      "suggestedCommand": "polish",
+      "suggestedInstruction": "On line 794 of index.html, change 'Gteex Revoluion Line' to 'Gteex Revolution Line'. Then grep the rest of the file for the substring 'Revoluion' and fix any other instances."
+    },
+    {
+      "id": "ISSUE-003",
+      "severity": "P1",
+      "what": "The 'What We Offer' card grid has five equal cards in a two-column layout, leaving an orphan half-row on tablet and desktop.",
+      "why": "An odd-card-count grid reads as sloppy generation rather than design intent, and the lone trailing card pulls the eye while diluting the visual weight of the four matched cards. It also visually flattens the prioritization — Drone Sales should not look equal to Windfall Drift Control.",
+      "fix": "Either drop to four cards (merge or remove one) or expand to six (split one). Given the hub product list, the cleanest move is a 3-up grid on md+ with a stronger last row; or alternatively make the first card span two columns to lead with the headline offering.",
+      "suggestedCommand": "layout",
+      "suggestedInstruction": "In the 'What We Offer' grid in index.html (lines 735-771, inside the About section), change the grid from `grid-cols-1 sm:grid-cols-2` to `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3` and promote the 'Agricultural Drone Sales' card to span two columns on lg via `lg:col-span-2` so the row of five reads as 1-wide + 4-supporting at every breakpoint with no orphan cell."
+    },
+    {
+      "id": "ISSUE-004",
+      "severity": "P2",
+      "what": "Six different labels for the same #contact CTA across the page ('Get Quote', 'Get a Quote', 'Request a Quote', 'Request Pricing', 'Schedule Service', 'Request Parts').",
+      "why": "Inconsistency reads as ungoverned content generation, and forces returning users to relearn the same action under each section heading. It also weakens the primary conversion path — A/B testing a single label is impossible when six are in play.",
+      "fix": "Standardize on two CTA labels: 'Request a Quote' for the sales/services path (hero, services section, products) and 'Schedule Service' for the parts/repair path. Sync the nav and mobile menu to use 'Request a Quote'.",
+      "suggestedCommand": "distill",
+      "suggestedInstruction": "Across index.html, replace every CTA label that targets the #contact anchor with one of two strings: use 'Request a Quote' on the hero, services section, R-32 section, I-19 section, Terraplex trust section, and the desktop+mobile nav buttons; use 'Schedule Service' only on the Parts & Service section's primary button and 'Request Parts' on the secondary outline button next to it. Do not change anchor targets, link colors, or button styles — labels only."
+    },
+    {
+      "id": "ISSUE-005",
+      "severity": "P2",
+      "what": "Service area, response-time SLA, and operating hours are nowhere in the UI — only buried in JSON-LD.",
+      "why": "A western-SD farmer reading the site cannot tell whether their county is covered, how fast the dealer can respond when a sprayer goes down mid-application, or when they can call. Decision-makers comparing dealers need this in 10 seconds. Right now they have to either call cold or guess.",
+      "fix": "Add a small 'Service Area' band — either a static map clip with the 150-mile radius highlighted, or a county/region list — and a 'Hours / Response' panel near the contact section with phone hours and typical response window. The radius (150 mi from Philip, SD) is already in the schema; surface it.",
+      "suggestedCommand": "clarify",
+      "suggestedInstruction": "Add a new 'Service Area & Response' band between the Terraplex Trust section and the About section in index.html. Two-column layout on lg+: left column shows a static styled map placeholder (use a CSS-tinted placeholder div sized 16:10 with an orange-500/20 ring and a pin marker labeled 'Philip, SD' — no external map API yet) and a one-sentence label '150-mile service radius covering western South Dakota'. Right column lists three short rows: 'Phone hours: Mon-Sat 7am-7pm CT' (use this as a placeholder pending dealer confirmation, mark with TODO comment), 'Typical response: within 24 hours on weekdays', and 'In-season urgent: call direct'. Match FORGE styling: stone-900/50 cards, orange-500/30 borders, eyebrow label 'COVERAGE' in orange-500 tracking-[0.3em]."
+    }
+  ],
+  "personaRedFlags": [
+    {
+      "persona": "In-field operator on mobile (dirty gloves, 4G, time-pressured)",
+      "flags": [
+        "Top-right desktop CTA is 'Get Quote' (form scroll) rather than tap-to-call — on mobile this should default to tel: for one-thumb access.",
+        "No sticky bottom tap-to-call bar despite the audience.",
+        "Background video autoplays on cellular with no poster fallback, eating data and showing a black hero on slow connections.",
+        "Form is the only conversion path on most CTAs; a busy operator with one signal bar may not get through it before the connection drops."
+      ]
+    },
+    {
+      "persona": "Operation owner / buying-committee decision-maker",
+      "flags": [
+        "No social proof — no operator quotes, no acreage-served stat, no neighboring-farm references — to validate Taylor's 2024-founded operation against established competitors.",
+        "No pricing transparency or 'how custom application works' explainer; an owner cannot estimate cost-per-acre or compare against their existing applicator without calling.",
+        "No 'About Taylor' photo or bio block; the JSON-LD names the founder but the visible page does not, so the family-owned positioning is asserted but not embodied.",
+        "Typo on the contact section subhead ('Revoluion') visible right above the lead form — credibility hit at the conversion moment."
+      ]
+    },
+    {
+      "persona": "Mobile-first farmer comparing dealers",
+      "flags": [
+        "Service area is described only as 'western South Dakota' — too vague for a farmer in, say, Pierre or Rapid City to know if they qualify.",
+        "Mobile menu uses an inconsistent amber hover color, signaling 'less polished than the homepage' on first interaction.",
+        "Six different CTA labels for the same form make the site feel inconsistent across scrolls; the farmer has to reread each section to figure out whether the button does the same thing.",
+        "Hours and response-time expectations are absent, so the comparison has to default to 'whoever picks up the phone first'."
+      ]
+    }
+  ],
+  "minorObservations": [
+    "Hero stacks autoplay video + dark gradient overlay + 2 animated glow blobs + SVG cross pattern + 2 ember lines — paint cost on low-end Android may be noticeable.",
+    "All product imagery is sourced from the Terraplex hub (image001.jpg, RevolutionWebHeader stills) — fine as a fallback, but a single dealer-supplied photo of Taylor or the sprayer in a SD field would meaningfully personalize the page.",
+    "`text-stone-500` body copy on `bg-stone-950` is borderline for WCAG AA (~4.5:1); the parts/service bullet lists and footer use it heavily — bumping to stone-400 in those spots would be safer.",
+    "Mobile menu does not trap focus or close on Escape, and `aria-expanded` is set to a string boolean ('true'/'false' via setAttribute) which is correct, but no inert/aria-hidden on the rest of the page when open.",
+    "Placeholder text uses `placeholder:text-stone-600` on `bg-stone-900/50` — fails contrast and is barely visible against the form background.",
+    "The 'I'm Interested In' select defaults to a disabled placeholder and is not `required`, so the lead-routing field will frequently arrive empty.",
+    "Dynamic footer year via JS is fine, but the static '2026' fallback in the markup will go stale if JS fails — consider rendering server-side or omitting the literal year.",
+    "Ember accent line at the I-19 section's bottom edge is missing where it appears at every other section transition — minor inconsistency in the FORGE motif.",
+    "Terraplex trust badge uses a generic shield icon repeated three times in the supporting cards — varying the icons would lift the section."
+  ]
+}

@@ -4,6 +4,19 @@ Claude: update this file as work happens. Capture decisions, the *why* behind th
 
 ## Recent decisions
 
+### 2026-04-29 — Added R-32 and I-19 standalone product pages + Drones dropdown nav
+
+- Created `r-32.html` and `i-19.html` as full standalone product pages. Site is no longer single-page only.
+- Each page: hero (eyebrow / gradient title / tagline / body / CTAs / image), 4 spec cards (full hub spec set), 5-pill benefits list, cross-sell card to the other model, contact CTA, footer. Reuses existing FORGE tokens (stone/zinc/orange/red, ember accent rules) — no redesign.
+- Spec content matches `hubs/terraplex/products/{r-32,i-19}.json` exactly. Body copy matches the in-page sections that were already on `index.html`. No paraphrasing.
+- Nav updated: added a "Drones" desktop dropdown between Services and Products, containing R-32 and I-19 with brief subtitles. Dropdown reveals on `:hover` / `:focus-within` (CSS-only, no JS), with chevron rotation and a transparent `pt-3` bridge to keep hover stable.
+- Mobile menu got a "Drones" eyebrow with R-32 and I-19 stacked below it. Active model gets `text-orange-500`.
+- **Mobile menu moved into the nav partial.** It used to be a sibling div in `index.html`; now it lives inside the `partial:nav` markers so all three pages (home, r-32, i-19) render the same menu from one source. The standalone div in `index.html` was removed.
+- Footer partial: added `R-32` and `I-19` quick-links between `Services` and `Products`. Links to homepage anchors are now `index.html#services` etc. when `activePage != "home"`, plain `#services` on home.
+- Template syntax used: flat `{{#if activePage=="home"}}…{{else}}…{{/if}}` per CLAUDE.md (no nesting). Each conditional is independent.
+- Drone product pages include Schema.org `Product` JSON-LD with MSRP from hub data ($72,000 R-32, $46,250 I-19) — hub MAP policy permits dealer MSRP advertising. The on-page UI does not yet show MSRP; the price lives in JSON-LD only.
+- Logged in `CHANGELOG.md` as customizations so propagation preserves them.
+
 ### 2026-04-19 — Migrated to Terraplex hub v0.2.0 (Phase 2 canary)
 
 - Created `spoke.config.json` pinning `hub.version: "0.2.0"`. Validates against `hubs/terraplex/spoke/spoke.schema.json`.

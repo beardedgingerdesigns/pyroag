@@ -230,6 +230,26 @@
 
         <div class="hidden md:flex items-center gap-8">
           <a href="#services" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">Services</a>
+
+          <div class="relative group">
+            <button type="button" class="text-stone-300 hover:text-white transition-colors text-sm font-medium inline-flex items-center gap-1 focus:outline-none focus:text-white" aria-haspopup="true">
+              Drones
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+              <div class="bg-stone-900/95 backdrop-blur-md border border-orange-500/20 rounded-lg shadow-[0_0_30px_rgba(249,115,22,0.15)] overflow-hidden">
+                <a href="r-32.html" class="block px-5 py-3 text-sm text-stone-300 hover:text-orange-500 hover:bg-stone-800/50 transition-colors">
+                  <p class="font-semibold">R-32 Revolution</p>
+                  <p class="text-xs text-stone-500 mt-0.5">High-capacity heavy lift</p>
+                </a>
+                <a href="i-19.html" class="block px-5 py-3 text-sm border-t border-stone-800 text-stone-300 hover:text-orange-500 hover:bg-stone-800/50 transition-colors">
+                  <p class="font-semibold">I-19 Revolution</p>
+                  <p class="text-xs text-stone-500 mt-0.5">Precision platform</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <a href="#products" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">Products</a>
           <a href="#about" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">About</a>
           <a href="#contact" class="text-stone-300 hover:text-white transition-colors text-sm font-medium">Contact</a>
@@ -246,12 +266,17 @@
       </div>
     </nav>
   </header>
-<!-- /partial:nav -->
 
-  <!-- Mobile Menu Panel -->
-  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-stone-950 pt-20 md:hidden">
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-stone-950 pt-20 md:hidden overflow-y-auto">
     <div class="flex flex-col items-center gap-6 p-8">
       <a href="#services" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">Services</a>
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-xs" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">Drones</p>
+        <a href="r-32.html" class="mobile-link text-white text-xl font-medium hover:text-amber-500 transition-colors">R-32 Revolution</a>
+        <a href="i-19.html" class="mobile-link text-white text-xl font-medium hover:text-amber-500 transition-colors">I-19 Revolution</a>
+      </div>
+
       <a href="#products" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">Products</a>
       <a href="#about" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">About</a>
       <a href="#contact" class="mobile-link text-white text-2xl font-medium hover:text-amber-500 transition-colors">Contact</a>
@@ -261,6 +286,7 @@
       </a>
     </div>
   </div>
+<!-- /partial:nav -->
 
   <main>
     <!-- =====================================================
@@ -703,6 +729,75 @@
     </section>
 
     <!-- =====================================================
+         SERVICE AREA & RESPONSE
+         ===================================================== -->
+    <section id="coverage" class="py-24 bg-stone-950 relative overflow-hidden" aria-label="Service Area and Response">
+      <div class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-orange-600/[0.05] rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <p class="text-orange-500 font-semibold tracking-[0.3em] uppercase text-sm mb-3" style="filter: drop-shadow(0 0 8px rgba(249,115,22,0.4));">
+            Coverage
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            Service Area
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">&amp; Response</span>
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="relative rounded-xl overflow-hidden ring-1 ring-orange-500/20 bg-gradient-to-br from-stone-900 via-stone-900/80 to-zinc-900 shadow-[0_0_40px_rgba(249,115,22,0.08)]" style="aspect-ratio: 16 / 10;" role="img" aria-label="Static map placeholder centered on Philip, SD">
+              <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: linear-gradient(rgba(249,115,22,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,0.12) 1px, transparent 1px); background-size: 48px 48px;"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="absolute w-40 h-40 rounded-full border border-orange-500/30 animate-pulse" style="box-shadow: 0 0 60px rgba(249,115,22,0.15) inset;"></div>
+                <div class="absolute w-24 h-24 rounded-full border border-orange-500/40"></div>
+                <div class="relative flex flex-col items-center">
+                  <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 10px rgba(249,115,22,0.6));"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span class="mt-2 text-xs font-semibold tracking-[0.2em] uppercase text-orange-400" style="filter: drop-shadow(0 0 6px rgba(249,115,22,0.4));">Philip, SD</span>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-stone-400 text-sm">150-mile service radius covering western South Dakota.</p>
+          </div>
+
+          <div class="space-y-4">
+            <!-- TODO: confirm phone hours with dealer; placeholder pending dealer confirmation -->
+            <div class="bg-stone-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-5 flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 rounded-lg bg-stone-900 border border-orange-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+                <svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold">Phone hours</p>
+                <p class="text-stone-400 text-sm">Mon–Sat 7am–7pm CT</p>
+              </div>
+            </div>
+            <div class="bg-stone-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-5 flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 rounded-lg bg-stone-900 border border-orange-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+                <svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold">Typical response</p>
+                <p class="text-stone-400 text-sm">Within 24 hours on weekdays</p>
+              </div>
+            </div>
+            <div class="bg-stone-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-5 flex items-start gap-4">
+              <div class="w-10 h-10 shrink-0 rounded-lg bg-stone-900 border border-orange-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+                <svg class="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold">In-season urgent</p>
+                <p class="text-stone-400 text-sm">Call direct</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
+    </section>
+
+    <!-- =====================================================
          ABOUT
          ===================================================== -->
     <section id="about" class="py-24 bg-zinc-950 relative overflow-hidden" aria-label="About Us">
@@ -732,8 +827,8 @@
 
           <div>
             <h3 class="text-2xl font-bold text-white mb-6">What We Offer</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-fr">
-              <div class="bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
+              <div class="lg:col-span-2 bg-stone-900/60 border border-orange-500/20 rounded-xl p-5 hover:border-orange-500/40 hover:bg-stone-900/80 transition-all duration-300">
                 <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-3 shadow-[0_0_20px_rgba(234,88,12,0.3)]">
                   <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
                 </div>
@@ -791,7 +886,7 @@
             <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Your Operation?</span>
           </h2>
           <p class="text-stone-400 text-lg max-w-2xl mx-auto">
-            Request a quote for drone services, inquire about the Gteex Revoluion Line, or schedule parts &amp; service.
+            Request a quote for drone services, inquire about the Gteex Revolution Line, or schedule parts &amp; service.
           </p>
         </div>
 
@@ -849,7 +944,7 @@
                 <h3 class="text-xl font-bold text-white mb-1">Thank You!</h3>
                 <p class="text-stone-300 text-sm">Your message has been sent. We'll be in touch within 24 hours.</p>
               </div>
-              <form action="/.netlify/functions/submit" method="POST" class="space-y-6">
+              <form id="contact-form" action="/.netlify/functions/submit" method="POST" class="space-y-6">
                 <input type="hidden" name="_redirect" value="/#contact">
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
                 <div class="grid md:grid-cols-2 gap-6">
@@ -885,11 +980,25 @@
                   <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your operation and how we can help..." class="w-full px-4 py-3 rounded-lg border border-stone-700 bg-stone-900/50 text-white placeholder:text-stone-600 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors resize-none"></textarea>
                 </div>
 
-                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white h-14 text-lg font-semibold rounded-lg shadow-[0_0_30px_rgba(234,88,12,0.3)] hover:shadow-[0_0_40px_rgba(234,88,12,0.5)] transition-all duration-300 border border-orange-500/30">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                  Send Message
+                <button id="contact-submit" type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 disabled:opacity-70 disabled:cursor-not-allowed text-white h-14 text-lg font-semibold rounded-lg shadow-[0_0_30px_rgba(234,88,12,0.3)] hover:shadow-[0_0_40px_rgba(234,88,12,0.5)] transition-all duration-300 border border-orange-500/30">
+                  <svg id="contact-submit-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <svg id="contact-submit-spinner" class="hidden w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                  <span id="contact-submit-label">Send Message</span>
                 </button>
+                <div id="contact-form-error" class="hidden mt-6 p-5 rounded-lg border border-orange-500/30 bg-stone-900/80" role="alert" aria-live="polite">
+                  <h3 class="text-white font-bold mb-3">We couldn't send that — please call (605) 441-6825 or try again</h3>
+                  <button type="button" id="contact-form-retry" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-orange-500/40 text-orange-400 hover:text-orange-500 hover:border-orange-500/70 transition-colors text-sm font-semibold">
+                    Retry
+                  </button>
+                </div>
               </form>
+              <div id="contact-form-success" class="hidden p-6 rounded-lg bg-orange-600/20 border border-orange-500/40 text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center">
+                  <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-1">Message Sent</h3>
+                <p class="text-stone-300 text-sm">Thanks — we'll be in touch within 24 hours.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -913,11 +1022,13 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-8 text-stone-400 text-sm">
-          <a href="#services" class="hover:text-white transition-colors">Services</a>
-          <a href="#products" class="hover:text-white transition-colors">Products</a>
-          <a href="#about" class="hover:text-white transition-colors">About</a>
-          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        <div class="flex flex-wrap justify-center gap-6 text-stone-400 text-sm">
+          <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
+          <a href="r-32.html" class="hover:text-white transition-colors">R-32</a>
+          <a href="i-19.html" class="hover:text-white transition-colors">I-19</a>
+          <a href="index.html#products" class="hover:text-white transition-colors">Products</a>
+          <a href="index.html#about" class="hover:text-white transition-colors">About</a>
+          <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
         </div>
 
         <p class="text-stone-500 text-sm">© <span id="footer-year">2026</span> Pyro Ag Services LLC</p>
@@ -969,6 +1080,65 @@
         if (banner) {
           banner.classList.remove('hidden');
           banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      // Progressive contact-form submission (no-JS POST is the fallback)
+      var form = document.getElementById('contact-form');
+      if (form && window.fetch) {
+        var submitBtn = document.getElementById('contact-submit');
+        var submitIcon = document.getElementById('contact-submit-icon');
+        var submitSpinner = document.getElementById('contact-submit-spinner');
+        var submitLabel = document.getElementById('contact-submit-label');
+        var errorBlock = document.getElementById('contact-form-error');
+        var retryBtn = document.getElementById('contact-form-retry');
+        var successBlock = document.getElementById('contact-form-success');
+        var defaultLabel = submitLabel ? submitLabel.textContent : 'Send Message';
+
+        function setSending(sending) {
+          if (!submitBtn) return;
+          submitBtn.disabled = sending;
+          if (submitLabel) submitLabel.textContent = sending ? 'Sending…' : defaultLabel;
+          if (submitIcon) submitIcon.classList.toggle('hidden', sending);
+          if (submitSpinner) submitSpinner.classList.toggle('hidden', !sending);
+        }
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (errorBlock) errorBlock.classList.add('hidden');
+          setSending(true);
+
+          var fd = new FormData(form);
+          fetch(form.getAttribute('action'), {
+            method: 'POST',
+            body: fd,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            if (res.status === 200) {
+              form.classList.add('hidden');
+              if (successBlock) {
+                successBlock.classList.remove('hidden');
+                successBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            } else {
+              setSending(false);
+              if (errorBlock) errorBlock.classList.remove('hidden');
+            }
+          }).catch(function() {
+            setSending(false);
+            if (errorBlock) errorBlock.classList.remove('hidden');
+          });
+        });
+
+        if (retryBtn) {
+          retryBtn.addEventListener('click', function() {
+            if (errorBlock) errorBlock.classList.add('hidden');
+            if (typeof form.requestSubmit === 'function') {
+              form.requestSubmit();
+            } else {
+              form.dispatchEvent(new Event('submit', { cancelable: true }));
+            }
+          });
         }
       }
     })();
